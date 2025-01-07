@@ -7,15 +7,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
-// Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyA3tspF8Bk3NiHh8eD-yYvJwZM2DbgnijE",
-//   authDomain: "login-form-129dc.firebaseapp.com",
-//   projectId: "login-form-129dc",
-//   storageBucket: "login-form-129dc.appspot.com",
-//   messagingSenderId: "360964365086",
-//   appId: "1:360964365086:web:0306b4f0b6ecd2473bc70f",
-// };
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAKM98angSbdTOH7q6d2b7tcAB2fZF33G0",

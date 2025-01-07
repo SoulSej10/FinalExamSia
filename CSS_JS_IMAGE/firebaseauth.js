@@ -105,7 +105,7 @@ async function sendOtpEmail(recipientName, recipientEmail, otp) {
   };
 
   try {
-    const response = await emailjs.send("service_evq566f", "template_10o7zwy", templateParams);
+    const response = await emailjs.send("service_xqkoa3n", "template_ncuhsau", templateParams);
     console.log(`OTP email sent successfully to: ${recipientEmail}`);
     showMessage("OTP sent to your email. Please verify.", "signInMessage");
     return true; // Indicate success
