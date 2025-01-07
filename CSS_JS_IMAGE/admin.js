@@ -3,13 +3,23 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebas
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
 // Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyA3tspF8Bk3NiHh8eD-yYvJwZM2DbgnijE",
+//   authDomain: "login-form-129dc.firebaseapp.com",
+//   projectId: "login-form-129dc",
+//   storageBucket: "login-form-129dc.appspot.com",
+//   messagingSenderId: "360964365086",
+//   appId: "1:360964365086:web:0306b4f0b6ecd2473bc70f",
+// };
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA3tspF8Bk3NiHh8eD-yYvJwZM2DbgnijE",
-  authDomain: "login-form-129dc.firebaseapp.com",
-  projectId: "login-form-129dc",
-  storageBucket: "login-form-129dc.appspot.com",
-  messagingSenderId: "360964365086",
-  appId: "1:360964365086:web:0306b4f0b6ecd2473bc70f",
+  apiKey: "AIzaSyAKM98angSbdTOH7q6d2b7tcAB2fZF33G0",
+  authDomain: "pipeline-885b6.firebaseapp.com",
+  projectId: "pipeline-885b6",
+  storageBucket: "pipeline-885b6.firebasestorage.app",
+  messagingSenderId: "757099453629",
+  appId: "1:757099453629:web:abc9bcbd8713328871ebd4",
+  measurementId: "G-T24P5G3LCF"
 };
 
 // Initialize Firebase
