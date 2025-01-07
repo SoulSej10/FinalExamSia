@@ -20,14 +20,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Fetch and display users
 async function fetchUsers() {
   try {
+    // Access the 'users' collection from Firestore
     const usersCollection = collection(db, "users");
     const userDocs = await getDocs(usersCollection);
+    
+    // Select the table body to insert data
     const tableBody = document.querySelector(".table tbody");
     tableBody.innerHTML = ""; // Clear existing rows
 
+    // Iterate through the documents and add rows to the table
     userDocs.forEach((doc) => {
       const userData = doc.data();
       const row = `<tr>
@@ -42,6 +45,7 @@ async function fetchUsers() {
     console.error("Error fetching users: ", error);
   }
 }
+
 
 // Fetch users on page load
 document.addEventListener("DOMContentLoaded", fetchUsers);
