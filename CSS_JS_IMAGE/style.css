@@ -129,13 +129,13 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #4481eb;
-  border-color: #4481eb;
+  color: #e2d54a;
+  border-color: #e2d54a;
 }
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #fde459;
   border: none;
   outline: none;
   height: 49px;
@@ -149,7 +149,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: #d8dd42;
 }
 .panels-container {
   position: absolute;
@@ -169,8 +169,8 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
-  transition: 1.8s ease-in-out;
+  background-image: linear-gradient(-45deg, #d8dd42 0%, #fde459 100%);
+  transition: 1.8s ease-in-out; 
   border-radius: 50%;
   z-index: 6;
 }
@@ -430,7 +430,7 @@ form.sign-in-form {
 
 .styled-table td {
   padding: 8px;
-  border: 1px solid #007bff;
+  border: 1px solid #ebbf44;
 }
 
 .styled-table label {
@@ -442,13 +442,13 @@ form.sign-in-form {
 .styled-table textarea {
   width: 100%;
   padding: 6px;
-  border: 1px solid #007bff;
+  border: 1px solid #ebbf44;
   border-radius: 4px;
 }
 
 .styled-table button[type="submit"] {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #ebbf44;
   color: white;
   border: none;
   border-radius: 4px;
@@ -456,7 +456,7 @@ form.sign-in-form {
 }
 
 .styled-table button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #ebbf44;
 }
 
 .title {
@@ -486,7 +486,7 @@ a{
   
   /* Enhanced modern pop-up styling */
 .messageDiv {
-  background-color: #007bff; /* Primary blue color */
+  background-color: #e2d54a; /* Primary blue color */
   color: #ffffff; /* White text for contrast */
   padding: 15px 25px; /* Increased padding for better touch target */
   border-radius: 8px; /* Slightly rounded corners */
@@ -514,7 +514,7 @@ a{
   /*=============== DASHBOARD ================*/
   .user .banner {
     width: 100%;
-    background-color: #3178c6;
+    background-color: #c6c131;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -555,14 +555,14 @@ a{
 }
 
 .user .banner a:hover {
-    background-color: #4a90e2;
+    background-color: #ebbf44;
     transform: scale(1.1);
 }
 
 .user .banner button {
   text-decoration: none;
   color: white;
-  background-color: #4a90e2;
+  background-color: #e2d54a;
   margin: 0 30px 0 0;
   font-size: 1rem;
   padding: 5px 10px;
@@ -571,7 +571,7 @@ a{
 }
 
 .user .banner button:hover {
-  background-color: #0077ff;
+  background-color: #ebbf44;
   transform: scale(1.1);
 }
 
@@ -589,7 +589,7 @@ a{
 }
 
 .user .header {
-    background-color: #3178c6;
+    background-color: #c6c131;
     color: white;
     padding: 20px;
     border-radius: 8px;
@@ -628,7 +628,7 @@ a{
 }
 
 .user .card .button {
-    background-color: #3178c6;
+    background-color: #c6c131;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -638,7 +638,7 @@ a{
 }
 
 .user .card .button:hover {
-    background-color: #4a90e2;
+    background-color: #e2d54a;
 }
 
 /* Responsive Design */
@@ -646,7 +646,7 @@ a{
   .user .banner .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #3178c6;
+        background-color: #c6c131;
         position: absolute;
         top: 50px;
         right: 20px;
@@ -746,7 +746,7 @@ a{
 }
 
 .verification .code:valid {
-  border-color: #4481eb;
+  border-color: #ebbf44;
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
 }
 
@@ -769,8 +769,8 @@ a{
 
 .verification .btn-primary {
   color: #fff;
-  background-color: #4481eb;
-  border-color: #5995fd;
+  background-color: #ebbf44;
+  border-color: #fde459;
 }
 
 /* Responsive styles for mobile */
@@ -797,7 +797,7 @@ a{
 }
   /*=============== ADMIN PAGE ================*/
   .admin .sidebar {
-    background-color: #3178c6;
+    background-color: #c6c131;
     color: #fff;
     width: 250px;
     min-width: 233px;
@@ -882,7 +882,7 @@ a{
 }
 
 .admin .sidebar-toggle {
-    background-color: #3178c6;
+    background-color: #c6c131;
     color: #fff;
     border: none;
     padding: 10px;
@@ -927,7 +927,7 @@ a{
 }
 
 .admin .banners {
-    background-color: #1477e0;
+    background-color: #d8dd42;
     color: white;
     text-align: center;
     padding: 15px 20px;
