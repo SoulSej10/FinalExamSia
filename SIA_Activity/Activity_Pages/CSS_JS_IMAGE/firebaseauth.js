@@ -97,9 +97,8 @@ document.getElementById("submitSignUp").addEventListener("click", async (event) 
 });
 
 // Function to send OTP email
-async function sendOtpEmail(recipientName, recipientEmail, otp) {
+async function sendOtpEmail(recipientEmail, otp) {
   const templateParams = {
-    to_name: recipientName, // User's full name
     to_email: recipientEmail, // Recipient's email
     message: `${otp}`, // OTP message
   };
