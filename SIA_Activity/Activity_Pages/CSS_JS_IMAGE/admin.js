@@ -1,11 +1,8 @@
 // Import Firebase modules
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
-// import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
-
-
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAKM98angSbdTOH7q6d2b7tcAB2fZF33G0",
   authDomain: "pipeline-885b6.firebaseapp.com",
@@ -26,6 +23,8 @@ async function fetchUsers() {
     const usersCollection = collection(db, "users");
     const userDocs = await getDocs(usersCollection);
     
+    console.log(userDocs); // Debugging log to check the returned data
+
     // Select the table body to insert data
     const tableBody = document.querySelector(".table tbody");
     tableBody.innerHTML = ""; // Clear existing rows
@@ -46,11 +45,10 @@ async function fetchUsers() {
   }
 }
 
-
 // Fetch users on page load
 document.addEventListener("DOMContentLoaded", fetchUsers);
 
-// ** Admin Logout Functionality **
+// Admin logout functionality
 document.getElementById("adminLogoutButton")?.addEventListener("click", () => {
   localStorage.removeItem("isAdmin");
   window.location.href = "index.html"; // Redirect to login page
