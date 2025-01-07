@@ -98,11 +98,20 @@ document.getElementById("submitSignUp").addEventListener("click", async (event) 
 
 // Function to send OTP email
 async function sendOtpEmail(recipientName, recipientEmail, otp) {
+  // Ensure email is not empty
+  if (!recipientEmail) {
+    console.error("Recipient email is missing.");
+    showMessage("Failed to send OTP email: Recipient email is missing.", "signInMessage");
+    return false;
+  }
+
   const templateParams = {
     to_name: recipientName, // User's full name
-    to_email: recipientEmail, // Recipient's email
+    to_email: recipientEmail, // Recipient's email (ensure this is a valid email)
     message: `${otp}`, // OTP message
   };
+  console.log("Recipient email:", recipientEmail);  // Add this line to debug
+  
 
   try {
     const response = await emailjs.send("service_xqkoa3n", "template_ncuhsau", templateParams);
@@ -119,6 +128,7 @@ async function sendOtpEmail(recipientName, recipientEmail, otp) {
     return false; // Indicate failure
   }
 }
+
 
 // ** Login Functionality **
 document.getElementById("submitSignIn").addEventListener("click", async (event) => {
