@@ -3,58 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS_JS_IMAGE/style.css" />
-    <title>ACTIVITY IN SIA</title>
-    <link rel="icon" href="CSS_JS_IMAGE/log.svg">
+    <title>OTP Verification</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+
+      body {
+        display: flex;
+        min-height: 100vh;
+        background-color: #f8fafc;
+      }
+
+      .verification {
+        display: flex;
+        width: 100%;
+        padding: 2rem;
+      }
+
+      .vcontainer {
+        margin: auto;
+        max-width: 400px;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        text-align: center;
+      }
+
+      h2 {
+        color: #1e293b;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #64748b;
+        font-size: 0.875rem;
+        margin-bottom: 2rem;
+      }
+
+      .code-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .code {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 500;
+        color: #1e293b;
+        background: white;
+      }
+
+      .code:focus {
+        outline: none;
+        border-color: #4461F2;
+        box-shadow: 0 0 0 2px rgba(68, 97, 242, 0.1);
+      }
+
+      .code::-webkit-inner-spin-button,
+      .code::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .btn {
+        padding: 0.75rem 2rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn-primary {
+        background-color: #4461F2;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #3451E2;
+      }
+
+      /* Optional: Add the illustration section */
+      @media (min-width: 768px) {
+        .verification::before {
+          content: '';
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 50%;
+          height: 100%;
+          background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="100%" height="100%" fill="%234461F2" opacity="0.1"/></svg>');
+          background-size: cover;
+          z-index: -1;
+        }
+      }
+    </style>
   </head>
   <body>
-<section class="verification">
-  <div class="vcontainer">
-    <h2>Enter your E-mail Verification</h2>
+    <section class="verification">
+      <div class="vcontainer">
+        <h2>OTP Verification</h2>
+        <p>Enter your OTP code to verify</p>
+        <div class="code-container">
+          <input type="number" class="code" placeholder="0" min="0" max="9" required>
+          <input type="number" class="code" placeholder="0" min="0" max="9" required>
+          <input type="number" class="code" placeholder="0" min="0" max="9" required>
+          <input type="number" class="code" placeholder="0" min="0" max="9" required>
+          <input type="number" class="code" placeholder="0" min="0" max="9" required>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary">Verify & Proceed</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      const codes = document.querySelectorAll('.code');
+      codes[0].focus();
 
+      codes.forEach((code, idx) => {
+        code.addEventListener('keydown', (e) => {
+          if (e.key >= 0 && e.key <= 9) {
+            codes[idx].value = '';
+            setTimeout(() => codes[idx + 1]?.focus(), 10);
+          } else if (e.key === 'Backspace') {
+            setTimeout(() => codes[idx - 1]?.focus(), 10);
+          }
+        });
+      });
 
-    <p>
-    Enter the five-digit verification code sent to your email.
-    </p>
-    <div class="code-container">
-      <input type="number" class="code" placeholder="0" min="0" max="9" required>
-      <input type="number" class="code" placeholder="0" min="0" max="9" required>
-      <input type="number" class="code" placeholder="0" min="0" max="9" required>
-      <input type="number" class="code" placeholder="0" min="0" max="9" required>
-      <input type="number" class="code" placeholder="0" min="0" max="9" required>
-    </div>
-    <div>
-      <button type="button" class="btn btn-primary">Verify</button>
-    </div>
-  </div>
-</section>
-<script>
-  const codes = document.querySelectorAll('.code');
-  codes[0].focus();
+      document.querySelector(".btn-primary").addEventListener("click", () => {
+        const enteredOtp = Array.from(codes).map((input) => input.value).join("");
+        const storedOtp = localStorage.getItem("otp");
 
-  codes.forEach((code, idx) => {
-    code.addEventListener('keydown', (e) => {
-      if (e.key >= 0 && e.key <= 9) {
-        codes[idx].value = '';
-        setTimeout(() => codes[idx + 1]?.focus(), 10);
-      } else if (e.key === 'Backspace') {
-        setTimeout(() => codes[idx - 1]?.focus(), 10);
-      }
-    });
-  });
-
-  document.querySelector(".btn-primary").addEventListener("click", () => {
-    const enteredOtp = Array.from(codes).map((input) => input.value).join("");
-    const storedOtp = localStorage.getItem("otp");
-
-    if (enteredOtp === storedOtp) {
-      alert("OTP verified successfully!");
-      localStorage.removeItem("otp");
-      window.location.href = "dashboard.html";
-    } else {
-      alert("Invalid OTP. Please try again.");
-    }
-  });
-</script>
-</body>
+        if (enteredOtp === storedOtp) {
+          alert("OTP verified successfully!");
+          localStorage.removeItem("otp");
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Invalid OTP. Please try again.");
+        }
+      });
+    </script>
+  </body>
 </html>
