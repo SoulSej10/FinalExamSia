@@ -16,86 +16,87 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
             display: flex;
             min-height: 100vh;
-            background-color: #f8fafc;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
-            margin: auto;
-            width: 100%;
-            max-width: 400px;
+            width: 400px;
             padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
         .title {
-            color: #1e293b;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            color: #333;
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
         }
 
         .input-field {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .input-field input {
             width: 100%;
             padding: 0.75rem;
-            font-size: 0.875rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            color: #1e293b;
+            font-size: 1rem;
+            border: 2px solid #fcb69f;
+            border-radius: 10px;
+            color: #333;
+            transition: all 0.3s ease;
         }
 
         .input-field input:focus {
             outline: none;
-            border-color: #4461F2;
-            box-shadow: 0 0 0 2px rgba(68, 97, 242, 0.1);
+            border-color: #ff6f61;
+            box-shadow: 0 0 5px rgba(255, 111, 97, 0.3);
         }
 
         .btn {
-            padding: 0.75rem 2rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
             border: none;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
         }
 
         .btn-primary {
-            background-color: #4461F2;
-            color: white;
+            background: #ff6f61;
+            color: #fff;
         }
 
         .btn-primary:hover {
-            background-color: #3451E2;
+            background: #e65b50;
         }
 
         .btn.transparent {
             background: none;
-            color: #4461F2;
-            border: 2px solid #4461F2;
+            color: #ff6f61;
+            border: 2px solid #ff6f61;
         }
 
         .btn.transparent:hover {
-            background-color: rgba(68, 97, 242, 0.1);
+            background: rgba(255, 111, 97, 0.1);
         }
 
         .messageDiv {
             margin-top: 1rem;
             padding: 1rem;
             border-radius: 5px;
-            background: rgba(231, 76, 60, 0.1);
+            background: rgba(231, 76, 60, 0.2);
             color: #e74c3c;
         }
 
@@ -108,8 +109,8 @@
         }
 
         .panel .content h3 {
-            color: #64748b;
-            font-size: 0.875rem;
+            color: #555;
+            font-size: 1rem;
             margin-bottom: 1rem;
         }
 
@@ -121,8 +122,7 @@
                 top: 0;
                 width: 50%;
                 height: 100%;
-                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="100%" height="100%" fill="%234461F2" opacity="0.1"/></svg>');
-                background-size: cover;
+                background: linear-gradient(to top, #fcb69f, #ffecd2);
                 z-index: -1;
             }
         }
