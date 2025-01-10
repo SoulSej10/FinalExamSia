@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({ publicKey: "8UY4NQ-ujBrmKwt8n" });
+        })();
+    </script>
+    <title>Activity in SIA</title>
+    <style>
+        /* * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            margin: auto;
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            text-align: center;
+        }
+
+        .title {
+            color: #1e293b;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .input-field {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #1e293b;
+        }
+
+        .input-field input:focus {
+            outline: none;
+            border-color: #4461F2;
+            box-shadow: 0 0 0 2px rgba(68, 97, 242, 0.1);
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #4461F2;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #3451E2;
+        }
+
+        .btn.transparent {
+            background: none;
+            color: #4461F2;
+            border: 2px solid #4461F2;
+        }
+
+        .btn.transparent:hover {
+            background-color: rgba(68, 97, 242, 0.1);
+        }
+
+        .messageDiv {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            background: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+        }
+
+        .panels-container {
+            margin-top: 2rem;
+        }
+
+        .panel .content {
+            margin-top: 1rem;
+        }
+
+        .panel .content h3 {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            body::before {
+                content: '';
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="100%" height="100%" fill="%234461F2" opacity="0.1"/></svg>');
+                background-size: cover;
+                z-index: -1;
+            }
+        } */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4461F2, #70A6FF);
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 900px;
+            height: 600px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .forms-container {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .input-field {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .input-field input:focus {
+            border-color: #4461F2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(68, 97, 242, 0.5);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background: #4461F2;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #3451E2;
+        }
+
+        .panels-container {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #4461F2, #70A6FF);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 0;
+            text-align: center;
+        }
+
+        .panels-container h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .btn.transparent {
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+            margin-top: 1rem;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .btn.transparent:hover {
+            background: #fff;
+            color: #4461F2;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <!-- Login Form -->
+                <form class="sign-in-form" id="signIn" method="post">
+                    <h2 class="title">Log In</h2>
+                    <div class="input-field">
+                        <input type="email" placeholder="Email" id="signInEmail" name="username" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" id="signInPassword" name="password" required>
+                    </div>
+                    <input type="submit" id="submitSignIn" value="Login" class="btn btn-primary" name="login">
+                    <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+                </form>
+
+                <!-- Register Form -->
+                <form class="sign-up-form" id="signUp" method="post" style="display:none;">
+                    <h2 class="title">Register</h2>
+                    <div class="input-field">
+                        <input type="text" id="rFname" placeholder="First Name" name="fname" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="rLname" placeholder="Last Name" name="lname" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="rEmail" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="rPassword" placeholder="Password" name="password" required minlength="6">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="rCPassword" placeholder="Confirm Password" name="passwordConfirm" required minlength="6">
+                    </div>
+                    <input type="submit" id="submitSignUp" class="btn btn-primary" value="Sign up" name="submit">
+                    <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Don't have an account?</h3>
+                    <button class="btn transparent" id="sign-up-btn">Register</button>
+                </div>
+            </div>
+            <div class="panel right-panel" style="display:none;">
+                <div class="content">
+                    <h3>Already have an account?</h3>
+                    <button class="btn transparent" id="sign-in-btn">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="CSS_JS_IMAGE/firebaseauth.js"></script>
+    <script src="CSS_JS_IMAGE/app.js"></script>
+    <script>
+        document.getElementById('sign-up-btn').addEventListener('click', () => {
+            document.getElementById('signIn').style.display = 'none';
+            document.getElementById('signUp').style.display = 'block';
+            document.querySelector('.right-panel').style.display = 'block';
+            document.querySelector('.left-panel').style.display = 'none';
+        });
+
+        document.getElementById('sign-in-btn').addEventListener('click', () => {
+            document.getElementById('signUp').style.display = 'none';
+            document.getElementById('signIn').style.display = 'block';
+            document.querySelector('.left-panel').style.display = 'block';
+            document.querySelector('.right-panel').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
