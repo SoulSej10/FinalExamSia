@@ -9,107 +9,94 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        font-family: 'Inter', sans-serif;
       }
 
       body {
         display: flex;
         min-height: 100vh;
-        background-color: #f8fafc;
+        background-color: #f3f4f6;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
       }
 
       .verification {
-        display: flex;
         width: 100%;
+        max-width: 360px;
         padding: 2rem;
-      }
-
-      .vcontainer {
-        margin: auto;
-        max-width: 400px;
-        padding: 2rem;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        background: #f9fafb;
+        border-radius: 24px;
+        border: 2px solid #e2e8f0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
         text-align: center;
       }
 
       h2 {
-        color: #1e293b;
-        font-size: 1.5rem;
+        color: #111827;
+        font-size: 1.75rem;
         font-weight: 600;
         margin-bottom: 1rem;
       }
 
       p {
-        color: #64748b;
-        font-size: 0.875rem;
-        margin-bottom: 2rem;
+        color: #6b7280;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       .code-container {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.75rem;
-        margin-bottom: 2rem;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       .code {
         width: 3rem;
         height: 3rem;
         font-size: 1.25rem;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
+        border: 2px solid #e5e7eb;
+        border-radius: 50%;
         text-align: center;
         font-weight: 500;
-        color: #1e293b;
-        background: white;
+        color: #111827;
+        background: #ffffff;
+        transition: border-color 0.2s, box-shadow 0.2s;
       }
 
       .code:focus {
         outline: none;
-        border-color: #4461F2;
-        box-shadow: 0 0 0 2px rgba(68, 97, 242, 0.1);
-      }
-
-      .code::-webkit-inner-spin-button,
-      .code::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
       }
 
       .btn {
-        padding: 0.75rem 2rem;
-        font-size: 0.875rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
         font-weight: 500;
-        border-radius: 8px;
+        border-radius: 24px;
         border: none;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: background-color 0.3s, transform 0.2s;
       }
 
       .btn-primary {
-        background-color: #4461F2;
+        background-color: #6366f1;
         color: white;
       }
 
       .btn-primary:hover {
-        background-color: #3451E2;
+        background-color: #4f46e5;
       }
 
-      /* Optional: Add the illustration section */
+      .btn-primary:active {
+        transform: scale(0.98);
+      }
+
       @media (min-width: 768px) {
-        .verification::before {
-          content: '';
-          position: fixed;
-          left: 0;
-          top: 0;
-          width: 50%;
-          height: 100%;
-          background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="100%" height="100%" fill="%234461F2" opacity="0.1"/></svg>');
-          background-size: cover;
-          z-index: -1;
+        body {
+          padding: 0;
         }
       }
     </style>
@@ -118,7 +105,7 @@
     <section class="verification">
       <div class="vcontainer">
         <h2>OTP Verification</h2>
-        <p>Enter your OTP code to verify</p>
+        <p>Enter the OTP code sent to your email</p>
         <div class="code-container">
           <input type="number" class="code" placeholder="0" min="0" max="9" required>
           <input type="number" class="code" placeholder="0" min="0" max="9" required>
@@ -126,9 +113,7 @@
           <input type="number" class="code" placeholder="0" min="0" max="9" required>
           <input type="number" class="code" placeholder="0" min="0" max="9" required>
         </div>
-        <div>
-          <button type="button" class="btn btn-primary">Verify & Proceed</button>
-        </div>
+        <button type="button" class="btn btn-primary">Verify & Proceed</button>
       </div>
     </section>
     <script>
