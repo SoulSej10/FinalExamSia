@@ -14,15 +14,15 @@
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
-
+        
         body {
-            background-color: #f8fafc;
-            color: #1e293b;
+            background-color: #fafafa;
+            color: #2d3748;
             line-height: 1.5;
         }
-
+        
         .banner {
-            background-color: #4461F2;
+            background-color: #f56c42; /* Warm orange */
             color: white;
             padding: 1rem 2rem;
             display: flex;
@@ -33,21 +33,21 @@
             z-index: 1000;
             transition: transform 0.3s ease-in-out;
         }
-
+        
         .banner.hiding {
             transform: translateY(-100%);
         }
-
+        
         .banner h1 {
             font-size: 1.5rem;
             font-weight: 600;
         }
-
+        
         .nav-links {
             display: flex;
             gap: 1rem;
         }
-
+        
         .nav-links a, .nav-links button {
             color: white;
             text-decoration: none;
@@ -56,7 +56,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-
+        
         .nav-links button {
             background: none;
             border: none;
@@ -65,42 +65,42 @@
             font: inherit;
             color: inherit;
         }
-
+        
         .toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-
+        
         .main-content {
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .header {
             text-align: center;
             margin-bottom: 2rem;
         }
-
+        
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            color: #4461F2;
+            color: #f56c42; /* Warm orange */
         }
-
+        
         .header p {
-            color: #64748b;
+            color: #4a5568; /* Dark gray */
             font-size: 1.1rem;
         }
-
+        
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
-
+        
         .card {
             background: white;
             border-radius: 12px;
@@ -109,25 +109,25 @@
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-
+        
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
-
+        
         .card h2 {
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
-            color: #4461F2;
+            color: #f56c42; /* Warm orange */
         }
-
+        
         .card p {
-            color: #64748b;
+            color: #718096; /* Light gray */
             margin-bottom: 1rem;
         }
-
+        
         .button {
-            background-color: #4461F2;
+            background-color: #f56c42; /* Warm orange */
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -136,30 +136,30 @@
             cursor: pointer;
             transition: background-color 0.2s;
         }
-
+        
         .button:hover {
-            background-color: #3451E2;
+            background-color: #e55b30; /* Darker shade of warm orange */
         }
-
+        
         .statistics {
-            background-color: #a3cefa;
-            color: white;
+            background-color: #fff6e5; /* Light cream */
+            color: #333;
             padding: 2rem;
             border-radius: 12px;
             margin-bottom: 3rem;
             text-align: center;
         }
-
+        
         .statistics h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-
+        
         .statistics p {
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
-
+        
         .recent-articles {
             background-color: white;
             padding: 2rem;
@@ -167,80 +167,95 @@
             margin-bottom: 3rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
-
+        
         .recent-articles h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #4461F2;
+            color: #f56c42; /* Warm orange */
         }
-
+        
         .recent-articles ul {
             list-style-type: none;
         }
-
+        
         .recent-articles li {
             margin-bottom: 0.75rem;
         }
-
+        
         .recent-articles a {
-            color: #1e293b;
+            color: #2d3748; /* Dark gray */
             text-decoration: none;
             transition: color 0.2s;
         }
-
+        
         .recent-articles a:hover {
-            color: #4461F2;
+            color: #f56c42; /* Warm orange */
         }
-
+        
         .footer {
-            background-color: #1e293b;
+            background-color: #2d3748; /* Dark gray */
             color: white;
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
         }
-
+        
         .footer h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-
+        
         .footer p {
             margin-bottom: 1.5rem;
         }
-
+        
         @media (max-width: 768px) {
             .banner {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
+        
             .nav-links {
                 display: none;
                 flex-direction: column;
                 width: 100%;
                 margin-top: 1rem;
             }
-
+        
             .nav-links.active {
                 display: flex;
             }
-
+        
             .toggle {
                 display: block;
                 position: absolute;
                 top: 1rem;
                 right: 1rem;
             }
-
+        
             .header h1 {
                 font-size: 2rem;
             }
-
+        
             .statistics, .recent-articles, .footer {
                 padding: 1.5rem;
             }
         }
+        
+
+
+  
+
+    
+   
+
+        
+        
+    
+
+
+        
+
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -280,7 +295,7 @@
         <div class="main-content">
             <div class="header">
                 <h1 style="color: black;">Welcome to DevHub</h1>
-                <p>Your Gateway to Development Resources</p>
+                <p>Your Gateway to Development Resources & Learn about pipeline</p>
             </div>
 
             <div class="cards">
