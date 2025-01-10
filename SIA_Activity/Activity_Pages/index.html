@@ -12,7 +12,7 @@
     </script>
     <title>Activity in SIA</title>
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -125,7 +125,127 @@
                 background-size: cover;
                 z-index: -1;
             }
+        } */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
         }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4461F2, #70A6FF);
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 900px;
+            height: 600px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .forms-container {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .input-field {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .input-field input:focus {
+            border-color: #4461F2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(68, 97, 242, 0.5);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background: #4461F2;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #3451E2;
+        }
+
+        .panels-container {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #4461F2, #70A6FF);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 0;
+            text-align: center;
+        }
+
+        .panels-container h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .btn.transparent {
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+            margin-top: 1rem;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .btn.transparent:hover {
+            background: #fff;
+            color: #4461F2;
+        }
+    
     </style>
 </head>
 <body>
